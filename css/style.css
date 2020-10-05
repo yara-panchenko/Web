@@ -1,0 +1,71 @@
+:root{
+    --dark-color:rgb(67, 186, 255);
+    --medium-color:rgb(61, 255, 68);
+    --light-color:rgba(202, 68, 68, 0.527);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Lato', sans-serif;
+    padding: 2rem;
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 14% 100%);
+}
+.header{
+    height: 95vh;
+    background-image: linear-gradient(to bottom right, var(--dark-color), var(--medium-color)), url('../img/pexels-jackson-david-5381386.jpg');
+}
+.text-box{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.heading-primary{
+    text-transform: uppercase;
+}
+.heading-primary-main{
+    display: block;
+    font: 5rom;
+    letter-spacing: 1.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+}
+@keyframes moveInLeft{
+    0%{transform: translateX(-100px);opacity: 0;}
+    80%{transform: translateX(20px);}
+    100%{transform: translateX(0);opacity: 1;}
+}
+.heading-primary-sub{
+    display: block;
+    font-size: 2rem;
+    letter-spacing: 0.6rem;
+    animation-name: moveInRight;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+}
+@keyframes moveInRight{
+    0%{transform: translateX(100px);opacity: 0;}
+    80%{transform: translateX(-20px);}
+    100%{transform: translateX(0);opacity: 1;}
+}
+.but{
+    display:inline-block;
+    cursor: pointer;
+    font-size:23px;
+    text-decoration:none;
+    padding:2px 18px; 
+    color:#00ff51;
+    background:#4632c7;
+    border-radius:6px;
+    border:2px solid #000000;}
+.but:hover{
+    background:#00ffae;
+    color:#0015ff;
+    border:2px solid #080808;
+    transition: all 1s ease;}
